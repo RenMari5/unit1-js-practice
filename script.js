@@ -74,3 +74,40 @@ if (travelType === "foot") {
   }
 
 console.log(`Traveling ${distance} miles by ${travelType} took ${time} hours and cost $${cost}!`);
+
+let costBar = "Cost: "
+for (let i = 0; i < 5; i++) {
+    costBar += "$";
+}
+console.log(costBar);
+// this one is really giving me trouble
+
+let timeBar = "Time: "
+for (let i = 1; i < 34; i++) {
+    timeBar += "/"
+}
+console.log(timeBar);
+// as is this one... come back and try again tomorrow
+
+if (travelType === "car") {
+    let meterCostRemaining = 1.00;
+    while (meterCostRemaining > 0) {
+      let coin = prompt(`$${meterCostRemaining} remaining. Type a coin to insert.`);
+      // TODO: check which coin was chosen: "quarter", "dime", "nickel", or "penny"
+      if (coin === quarter) {
+          console.log(meterCostRemaining - 0.25)
+      } else if (coin === dime) {
+        console.log(meterCostRemaining - 0.10)
+      } else if (coin === nickle) {
+        console.log(meterCostRemaining - 0.05)
+      } else if (coin === penny) {
+        console.log(meterCostRemaining - 0.01)
+      }
+      // and subtract that from meterCostRemaining
+      meterCostRemaining -= .25;
+      console.log("Meter cost remaining: " + meterCostRemaining);
+    }
+    console.log("You have paid the parking meter.");
+  }
+  // come back to this tomorrow, too
+  
